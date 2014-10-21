@@ -1,0 +1,7 @@
+student_work_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: StudentWorkBundle:Default:index }
+    
+home:
+    path: /
+    defaults: { _controller: StudentWorkBundle:Work:index }

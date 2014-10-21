@@ -1,0 +1,4 @@
+student_work:
+    resource: "@StudentWorkBundle/Resources/config/routing.yml"
+    prefix:   /
+
