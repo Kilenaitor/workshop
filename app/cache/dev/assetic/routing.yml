@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /Users/kyle/Student/Student/app/config/routing_dev.yml
