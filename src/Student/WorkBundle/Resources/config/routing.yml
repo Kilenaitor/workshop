@@ -5,3 +5,11 @@ student_work_homepage:
 home:
     path: /
     defaults: { _controller: StudentWorkBundle:Work:index }
+    
+login:
+    path: /login
+    defaults: { _controller: StudentWorkBundle:Work:login }
+    
+logout:
+    path: /logout
+    defaults: { _controller: StudentWorkBundle:Work:logout }

@@ -1,0 +1,193 @@
+body {
+	font-family: helvetica, arial, sans-serif;
+}
+
+#login{
+	text-align: center;
+	min-height: 330px;
+	width: 300px;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	top: 50%;
+	margin-top: -215px;
+}
+
+#box {
+	background: #eee;
+	height: 100%;
+	padding: 40px 40px;
+	box-shadow: 0px 0px 2px #484848;
+}
+
+small {
+	font-size:10px;
+	color: #494949;
+}
+
+p {
+	font-size: 18px;
+	color: #494949;
+}
+
+.profile-img {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+}
+
+#Password {
+	margin-top: 10px;
+}
+
+.form {
+	height: 35px;
+	width: 200px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.turquoise-flat-button {
+	position: relative;
+  	vertical-align: top;
+  	width: 206px;
+  	height: 40px;
+	padding: 0;
+	margin-top: 10px;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	background: #86dd8d;
+	border: 0;
+}
+.turquoise-flat-button:hover {
+	top: 1px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#main {
+	text-align: center;
+	min-height: 330px;
+	width: 300px;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	top: 50%;
+	margin-top: -215px;
+}
+
+tr:hover {
+	background-color: yellow;
+}
+
+tr:nth-child(even) {
+	 background-color: #f6f6f6;
+ }
+
+tr:nth-child(odd) {
+	background: #dddddd;
+}
+
+.autoExpand{
+	display:block;
+	box-sizing: padding-box;
+	overflow:hidden;
+}
+
+.reply_delete:hover{
+	color:#FD0D1B !important;
+}
+
+#sidebar {
+	position: absolute;
+	top: 0; right: 0; bottom: 0;
+	height: 100%;
+	width: 300px;
+	background-color: #dddddd;
+	text-align:left;
+	overflow: scroll;
+	-webkit-scrollbar: width 0 !important;
+}
+
+#sidebar::-webkit-scrollbar
+{
+	 width: 0 !important;
+}
+
+.element {
+	font-size:14px;
+	color:#000;
+	padding:5px 10px;
+}
+
+.notif {
+	font-size:14px;
+	color:#000;
+	padding:5px 10px;
+}
+
+.element:hover {
+	color:#1F80C9 !important;
+}
+
+.elem:hover {
+	color:#1F80C9 !important;
+}
+
+#sidebar-footer {
+	position:absolute;
+	bottom:0; right:0;
+	width: 300px;
+	text-align:center;
+}
+
+#notbar-footer {
+	position:absolute;
+	bottom:0; left:0;
+	width: 300px;
+	text-align:center;
+}
+
+.mark-button {
+	position: relative;
+  	vertical-align: top;
+  	height: 40px;
+	width:100%;
+	padding: 0;
+	margin-top: 10px;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	background:#4598EB;
+	border: 0;
+}
+
+.mark-button:active {
+	background:#3e88d3;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#notifications {
+	position: absolute;
+	top: 0; left: 0; bottom: 0;
+	height: 100%;
+	width: 300px;
+	background-color: #dddddd;
+	text-align:left;
+	overflow: auto;
+}
+
+#notifications::-webkit-scrollbar
+{
+	 width: 0 !important;
+}
+
+#signup
+{
+	position: absolute;
+	top: 0; right: 0;
+}

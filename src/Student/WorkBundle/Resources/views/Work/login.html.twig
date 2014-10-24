@@ -1,0 +1,23 @@
+<html lang="en" class="no-js">
+	<head>
+        <title>{% block title %}Login{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset ('css/default.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset ('css/component.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+	</head>
+	<body>
+		<div id="login">
+			<div id="box">
+				<form method="post" action="">
+					<p>
+						<input class="form" id="Username" name="username" type="text" placeholder="Username" ><br> <!-- Username input box -->
+						<input class="form" id="Password" name="password" type="password" placeholder="Password"><br> <!-- Password input box -->
+						<button type="submit" name="submit" class="btn btn-4 btn-4a">Login</button> <!-- Login (submit) button -->
+					</p>
+				</form>
+                {% if error is defined %}<h4 class='alert'>{{ error }}</h4>{% endif %}
+			</div>
+		</div><!-- end login -->
+	</body>
+</html>

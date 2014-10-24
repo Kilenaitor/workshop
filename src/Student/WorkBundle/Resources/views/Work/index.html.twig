@@ -1,1 +1,21 @@
-Test! This is a test! Testing 123!
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<title>{% block title %}Success{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset ('css/default.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+	</head>
+	<body style="background-image: none;">
+		<div id="main">
+			<p>
+				Successfully authenticated user: <h1><b>{{ name }}<b><h1><!-- Displaying that they were successfully authenticated -->
+			</p>
+			<p style="font-size:22px; text-decoration:none">
+				<a href="{{ path('logout') }}">
+                    <button class="turquoise-flat-button" style="background:#FC4144">Log Out</button>
+                </a>
+			</p>
+		</div><!-- end main -->
+	</body>
+</html>

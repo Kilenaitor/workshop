@@ -41,6 +41,19 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             return array (  '_controller' => 'Student\\WorkBundle\\Controller\\WorkController::indexAction',  '_route' => 'home',);
         }
 
+        if (0 === strpos($pathinfo, '/log')) {
+            // login
+            if ($pathinfo === '/login') {
+                return array (  '_controller' => 'Student\\WorkBundle\\Controller\\WorkController::loginAction',  '_route' => 'login',);
+            }
+
+            // logout
+            if ($pathinfo === '/logout') {
+                return array (  '_controller' => 'Student\\WorkBundle\\Controller\\WorkController::logoutAction',  '_route' => 'logout',);
+            }
+
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
