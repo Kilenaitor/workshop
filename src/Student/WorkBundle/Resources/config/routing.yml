@@ -13,3 +13,7 @@ login:
 logout:
     path: /logout
     defaults: { _controller: StudentWorkBundle:Work:logout }
+
+signup:
+    path: /signup
+    defaults: { _controller: StudentWorkBundle:Work:signup }

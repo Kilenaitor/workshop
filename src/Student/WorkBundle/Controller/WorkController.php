@@ -60,4 +60,35 @@ class WorkController extends Controller
         $session->clear();
         return $this->redirect($this->generateUrl('home'));
     }
+	
+	public function signupAction()
+	{
+		$session = $this->getRequest()->getSession();
+		
+		if($_POST && empty($_POST['username']))
+		{
+			$error = "Username cannot be blank";
+            return $this->render('StudentWorkBundle:Work:signup.html.twig', array('error' => $error));
+		}
+		
+		if($_POST && empty($_POST['password']))
+		{
+			$error = "Password cannot be blank";
+            return $this->render('StudentWorkBundle:Work:signup.html.twig', array('error' => $error));
+		}
+        
+        if($_POST && !empty($_POST['username']) && !empty($_POST['password']))
+		{
+            $response = Membership::signup($_POST['username'], $_POST['password'], $session);	//Validate the user when they click submit on the login
+        
+	        if($response['status'] == 'success')
+	            return $this->redirect($this->generateUrl('home'));
+		    else if($response['status'] == 'failure')
+			{
+				$error = $response['message'];
+	            return $this->render('StudentWorkBundle:Work:signup.html.twig', array('error' => $error));
+			}
+		}
+		return $this->render('StudentWorkBundle:Work:signup.html.twig');
+	}
 }

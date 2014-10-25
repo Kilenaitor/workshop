@@ -7,16 +7,14 @@
         {% endblock %}
 	</head>
 	<body>
-		<a href="{{ path('signup') }}">
-            <button class="register-button">Register</button>
-        </a>
 		<div id="login">
 			<div id="box">
+				<h2>Register</h2>
 				<form method="post" action="">
 					<p>
 						<input class="form" id="Username" name="username" type="text" placeholder="Username" ><br> <!-- Username input box -->
 						<input class="form" id="Password" name="password" type="password" placeholder="Password"><br> <!-- Password input box -->
-						<button type="submit" name="submit" class="btn btn-4 btn-4a">Login</button> <!-- Login (submit) button -->
+						<button type="submit" name="submit" class="btn btn-4 btn-4a" style="padding: 10px 59px">Register</button> <!-- Login (submit) button -->
 					</p>
 				</form>
                 {% if error is defined %}

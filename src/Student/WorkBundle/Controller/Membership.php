@@ -63,6 +63,30 @@ class Membership
 		}
 	}
     
+    static function signup($username, $password, $session)
+    {
+        $password = hash('sha256', $password); //Hash the input password using SHA256 encryption algorithm (No salt because I'm lame)
+        $con = mysqli_connect("localhost","root","","Student"); //Connect to the database
+		if(mysqli_connect_errno()) 
+		{
+		  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          die;
+		}
+        $query = mysqli_query($con, "SELECT * FROM users WHERE username='$username'"); //Lookup username
+        $row = mysqli_fetch_assoc($query);
+        if(!empty($row))
+        {
+            return array('status' => 'failure', 'message' => 'Username is already taken');
+        }
+        
+        $query = "INSERT INTO users (`username`, `password`) VALUES ('$username', '$password')";
+        mysqli_query($con, $query);
+		$username = self::getUsername($username);
+		$session->set('status', 'authorized'); //Set their session status to authorized
+		$session->set('username', $username); //Set their session username to their username for global access throughout the site
+        return array('status' => 'success');
+    }
+    
     static function getUsername($username)
 	{
 		$con=mysqli_connect("localhost","root","", "Student"); //Connect to the database
@@ -70,4 +94,5 @@ class Membership
         $query = mysqli_query($con, "SELECT username FROM users WHERE username='$username'");
         return $query->fetch_assoc()['username'];
 	}
+    
 }
