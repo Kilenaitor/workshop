@@ -29,13 +29,10 @@ class Membership
 			$username = self::getUsername($username);
 			$session->set('status', 'authorized'); //Set their session status to authorized
 			$session->set('username', $username); //Set their session username to their username for global access throughout the site
-        
-            return true;
+            return array('status' => 'success');
 		} 
 		else 
-		{
-			return "Incorrect Username or Password"; //Otherwise return an error that they had an incorrect username or password
-		}
+			return array('status' => 'failure'); //Otherwise return an error that they had an incorrect username or password
 	}
     
     static function verify($username, $password)

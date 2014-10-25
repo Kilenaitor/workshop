@@ -26,16 +26,32 @@ class WorkController extends Controller
     public function loginAction()
     {
         $session = $this->getRequest()->getSession();
+		
+		if($_POST && empty($_POST['username']))
+		{
+			$error = "Username cannot be blank";
+            return $this->render('StudentWorkBundle:Work:login.html.twig', array('error' => $error));
+		}
+		
+		if($_POST && empty($_POST['password']))
+		{
+			$error = "Password cannot be blank";
+            return $this->render('StudentWorkBundle:Work:login.html.twig', array('error' => $error));
+		}
         
         if($_POST && !empty($_POST['username']) && !empty($_POST['password']))
+		{
             $response = Membership::validateUser($_POST['username'], $_POST['password'], $session);	//Validate the user when they click submit on the login
         
-        if(isset($response) && $response)
-            return $this->redirect($this->generateUrl('home'));
-        else if(isset($response))
-            return $this->render('StudentWorkBundle:Work:login.html.twig', array('error' => $response));
-        else
-            return $this->render('StudentWorkBundle:Work:login.html.twig');
+	        if($response['status'] == 'success')
+	            return $this->redirect($this->generateUrl('home'));
+		    else if($response['status'] == 'failure')
+			{
+				$error = "Incorrect Username or Password";
+	            return $this->render('StudentWorkBundle:Work:login.html.twig', array('error' => $error));
+			}
+		}
+		return $this->render('StudentWorkBundle:Work:login.html.twig');
     }
     
     public function logoutAction()
