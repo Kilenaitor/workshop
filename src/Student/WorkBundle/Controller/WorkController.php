@@ -44,5 +44,4 @@ class WorkController extends Controller
         $session->clear();
         return $this->redirect($this->generateUrl('home'));
     }
-    
 }
