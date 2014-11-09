@@ -38,6 +38,7 @@ class __TwigTemplate_49205ea8f4f205c01f243e249437663450d40e0079ec60185135bd11a06
         </a>
 \t\t<div id=\"login\">
 \t\t\t<div id=\"box\">
+                <h2>Log In</h2>
 \t\t\t\t<form method=\"post\" action=\"\">
 \t\t\t\t\t<p>
 \t\t\t\t\t\t<input class=\"form\" id=\"Username\" name=\"username\" type=\"text\" placeholder=\"Username\" ><br> <!-- Username input box -->
@@ -46,15 +47,15 @@ class __TwigTemplate_49205ea8f4f205c01f243e249437663450d40e0079ec60185135bd11a06
 \t\t\t\t\t</p>
 \t\t\t\t</form>
                 ";
-        // line 22
+        // line 23
         if (array_key_exists("error", $context)) {
-            // line 23
+            // line 24
             echo "\t\t\t\t\t<h4 class='alert'>";
             echo twig_escape_filter($this->env, (isset($context["error"]) ? $context["error"] : $this->getContext($context, "error")), "html", null, true);
             echo "</h4>
 \t\t\t\t";
         }
-        // line 25
+        // line 26
         echo "\t\t\t</div>
 \t\t</div><!-- end login -->
 \t</body>
@@ -94,6 +95,6 @@ class __TwigTemplate_49205ea8f4f205c01f243e249437663450d40e0079ec60185135bd11a06
 
     public function getDebugInfo()
     {
-        return array (  80 => 6,  75 => 5,  72 => 4,  66 => 3,  58 => 25,  52 => 23,  50 => 22,  35 => 10,  31 => 8,  29 => 4,  25 => 3,  21 => 1,);
+        return array (  81 => 6,  76 => 5,  73 => 4,  67 => 3,  59 => 26,  53 => 24,  51 => 23,  35 => 10,  31 => 8,  29 => 4,  25 => 3,  21 => 1,);
     }
 }
