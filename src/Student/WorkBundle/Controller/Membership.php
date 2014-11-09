@@ -16,11 +16,6 @@ class Membership
 		/* Code goes here */
 	}
     
-    static function verify($username, $password)
-	{
-        /* Code goes here */
-	}
-    
     static function signup($username, $password, $session)
     {
         /* Code goes here */
@@ -33,5 +28,10 @@ class Membership
         $query = mysqli_query($con, "SELECT username FROM users WHERE username='$username'");
         return $query->fetch_assoc()['username'];
 	}
+    
+    static function connectToDatabase()
+    {
+        return mysqli_connect("localhost","root","","Student");
+    }
     
 }
