@@ -18,7 +18,7 @@ Windows, MacOSX, and Linux should all work
 Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads.html). 
 
 ## Download the source
-Get a zip of the project [here](https://github.com/acm-ucr/Web-Development-Workshop-Kyle/archive/master.zip) or clone the project using git if you know how to! Be sure to unzip the folder before continuing.
+Get a zip of the project [here](https://github.com/acm-ucr/Web-Development-Workshop-Kyle/archive/empty.zip) or clone the project using git if you know how to! Move the project to your Desktop and be sure to unzip it!
 
 ## Running the Virtual Machine
 Open a terminal and go to the directory where the project is at. On Linux/MacOSX, you would do
@@ -40,13 +40,7 @@ vagrant up
 NOTE: This process might take a while so be patient!
 ALSO NOTE: A screen will pop up while the script is running, DO NOT TRY TO LOG IN TO IT LEAVE IT BE
 
-Once the script has completed do the following:
-```bash
-vagrant halt
-vagrant up
-```
-
-This will restart our Virtual Machine and you should be seeing the same screen pop up, now asking you to login in. Your username is `vagrant` and password is also `vagrant`
+Once the script has completed, go back to the screen that popped up. Your username is `vagrant` and password is `vagrant`. Once you're logged in, type `startx` then enter. You should see a GUI desktop now. 
 
 # Next Steps
 On the VM, you can open firefox by going to `Applications` then searching for `firefox`. You can also open up a terminal by searching for `terminal`.
