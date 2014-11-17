@@ -1,2 +1,6 @@
-app/cache/*
-app/logs/*
+/vendor/*
+/app/cache/*
+/app/logs/*
+
+# Vagrant hidden directory
+.vagrant
