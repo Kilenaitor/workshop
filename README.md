@@ -40,7 +40,7 @@ vagrant up
 NOTE: This process might take a while so be patient!
 ALSO NOTE: A screen will pop up while the script is running, DO NOT TRY TO LOG IN TO IT LEAVE IT BE
 
-Once the script has completed, go back to the screen that popped up. Your username is `vagrant` and password is `vagrant`. Once you're logged in, type `startx` then enter. You should see a GUI desktop now. 
+Once the script has completed, go back to the screen that popped up. Your username is `vagrant` and password is `vagrant`. You should be seeing a desktop GUI starting after that!
 
 # Next Steps
 On the VM, you can open firefox by going to `Applications` then searching for `firefox`. You can also open up a terminal by searching for `terminal`.
