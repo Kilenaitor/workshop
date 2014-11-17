@@ -42,6 +42,11 @@ ALSO NOTE: A screen will pop up while the script is running, DO NOT TRY TO LOG I
 
 Once the script has completed, go back to the screen that popped up. Your username is `vagrant` and password is `vagrant`. You should be seeing a desktop GUI starting after that!
 
+# Turning off the virtual machine
+Simply hitting the 'x' on the VM display should do it. The cool kids way of doing it would be to go to the terminal window and typing `vagrant halt`. 
+
+Feel free to do this after you have verified the VM is up. You should be ready for the Workshop at this point!
+
 # Next Steps
 On the VM, you can open firefox by going to `Applications` then searching for `firefox`. You can also open up a terminal by searching for `terminal`.
 
@@ -52,3 +57,4 @@ ls
 ```
 
 Looks familiar? Should be the same files you downloaded previously.
+
